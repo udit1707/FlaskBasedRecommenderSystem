@@ -11,12 +11,12 @@ cnx = create_engine('mysql+pymysql://b92e5f9aaa362f:cd35a5e2@us-cdbr-east-02.cle
 # cnx = create_engine('mysql+pymysql://root:5511@localhost/trek-advisor')
 
 #read data
-treks = pd.read_sql_query("SELECT id,name,image,mean_rating,count_ratings FROM treks", cnx) #read the entire table
-#print(treks.head())
+treks = pd.read_sql_query("SELECT id,name,image,mean_rating,count_ratings FROM treks WHERE count_ratings>=1", cnx) #read the entire table
+# print(treks.head())
 C = treks['mean_rating'].mean()
 #print(C)
-m = treks['count_ratings'].quantile(0.50)
-#print(m)
+m = treks['count_ratings'].quantile(0.)
+print(m)
 q_treks = treks.copy().loc[treks['count_ratings'] >= m]
 
 

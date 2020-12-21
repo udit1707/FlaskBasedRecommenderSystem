@@ -46,7 +46,7 @@ def index():
 def recommen():
     result=Model.recommenFetch()
     result=json.dumps(result)
-    print(result)    
+    # print(result)    
     return jsonify({'msg': 'success','data_result':result})
 
 # threading.Timer(20.0, callToCSV).start()
