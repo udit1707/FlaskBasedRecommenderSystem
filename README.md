@@ -5,6 +5,5 @@
 
 ## Working
 
-![Working-gif](https://user-images.githubusercontent.com/43987867/101902207-4b770c80-3bd8-11eb-8643-69f5ce77e914.gif)
-
+![Working-gif](https://user-images.githubusercontent.com/43987867/102777339-66a30280-43b6-11eb-9588-62f1c625a6dd.gif)
 
