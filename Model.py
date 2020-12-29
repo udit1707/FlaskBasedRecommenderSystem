@@ -7,8 +7,7 @@ from sklearn.metrics.pairwise import linear_kernel
 import pymysql
 from sqlalchemy import create_engine
 
-cnx = create_engine('mysql+pymysql://b92e5f9aaa362f:cd35a5e2@us-cdbr-east-02.cleardb.com/heroku_32ef109f1d9bc84')    
-# cnx = create_engine('mysql+pymysql://root:5511@localhost/trek-advisor')
+cnx = create_engine('mysql+pymysql://{username}:{password}@{hostname}/{db_name}')    
 
 #read data
 treks = pd.read_sql_query("SELECT id,name,image,mean_rating,count_ratings FROM treks WHERE count_ratings>=1", cnx) #read the entire table
